@@ -1,9 +1,6 @@
 package com.example.hello.controller;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @author YuHan Wang
@@ -20,5 +17,10 @@ public class HelloController {
     @GetMapping("/${id}")
     public String show(@PathVariable("id") Integer id) {
         return String.valueOf(id);
+    }
+
+    @GetMapping("/hello")
+    public String time(@RequestParam("time") String time) {
+        return time;
     }
 }
