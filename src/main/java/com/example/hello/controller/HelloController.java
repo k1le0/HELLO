@@ -16,6 +16,6 @@ public class HelloController {
 
     @GetMapping("/time")
     public String time(@RequestParam("time") String time) {
-        return time;
+        return time + "123";
     }
 }
