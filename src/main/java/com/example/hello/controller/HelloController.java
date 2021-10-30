@@ -14,12 +14,7 @@ public class HelloController {
         return "Hello World";
     }
 
-    @GetMapping("/${id}")
-    public String show(@PathVariable("id") Integer id) {
-        return String.valueOf(id);
-    }
-
-    @GetMapping("/hello")
+    @GetMapping("/time")
     public String time(@RequestParam("time") String time) {
         return time;
     }
